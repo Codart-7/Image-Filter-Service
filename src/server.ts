@@ -25,8 +25,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   // RETURNS
   //   the filtered image file.
   /**************************************************************************** */
-  //! END @TODO1
-  
+
 
   // Root Endpoint
   // Displays a simple message to the user
@@ -52,9 +51,9 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
         //     4. delete any files on the server on finish of the response
         deleteLocalFiles([filteredpath]);
       });
-    } catch (err) {
-      console.log(`Error: ${err}`);
-      res.status(422).send(`Please try again`)
+    } catch (error) {
+      console.log(`Error: ${error}`);
+      res.status(422).send(`Encountered an error, please try again.`)
     }
   })
     
